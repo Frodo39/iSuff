@@ -1,10 +1,10 @@
 import React from "react";
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
-export default function Button({text, }){
+export default function Button({text, onPress }){
 	return(
 		<TouchableOpacity>
-			<View style={styles.button}>
+			<View style={styles.button} onStartShouldSetResponder={onPress}>
 				<Text style={styles.buttonText}>{ text }</Text>
 			</View>
 		</TouchableOpacity>
@@ -25,5 +25,6 @@ const styles = StyleSheet.create({
 			textTransform:"uppercase",
 			fontSize: 40,
 			textAlign: "center",
+			paddingHorizontal: "5%",
 		}
 })
