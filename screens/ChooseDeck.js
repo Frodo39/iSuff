@@ -5,39 +5,42 @@ import { backgroundColor } from "react-native/Libraries/Components/View/ReactNat
 import DeckSquare from "../components/DeckSquare";
 
 const ChooseDeck = () => {
-
     return(
-        <View style={styles.chooseDeck}>
-            <DeckSquare></DeckSquare>
-            <DeckSquare></DeckSquare>
-            <DeckSquare></DeckSquare>
-            <DeckSquare></DeckSquare>
-
+        <View style={styles.container}>
+            <View style={styles.textContainer}>
+                 <Text style={styles.title}>Deck wählen</Text>
+            </View>
+            <View  style={styles.deckcontainer}>
+                <DeckSquare kartenName="Basic" kartenAnzahl="20"></DeckSquare>
+                <DeckSquare kartenName="Extreme" kartenAnzahl="20"></DeckSquare>
+                <DeckSquare kartenName="SFW" kartenAnzahl="20"></DeckSquare>
+                <DeckSquare kartenName="Alle" kartenAnzahl="80"></DeckSquare>
+            </View>
         </View>
     )
-
 }
 
 const styles = StyleSheet.create({
-    chooseDeck: {
-        marginBottom: 20,
-        minWidth: 300,
-        minHeight: 100,
-        backgroundColor: "#04005E",
-        borderColor: "#E92EFB",
-        borderRadius: 5,
-        borderWidth: 2,  
-        flexDirection: "row",
-        flexWrap: "wrap",  
+    container: {
+        flex: 1,
+        flexDirection: "column",
+        backgroundColor: '#050248',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+    deckcontainer:{
+        width:"85%",
+        flex: 4,
     },
-    theme:{
-        fontSize: 30,
-        color:  "#fff",
-    },
-    karten: {
-        fontSize: 20,
-        color:  "#fff",
-    }
+    title: {
+        fontSize: 50,
+        fontWeight: "bold",
+        color: "#ffffff",
+      },
+      textContainer:{
+          flex:1,
+          paddingTop:"15%",
+      }
 
 })
 
