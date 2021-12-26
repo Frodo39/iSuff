@@ -1,0 +1,25 @@
+{
+    "fragen":[
+        {
+            "frage": "Dreh dich im Kreis",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Mach 5 Liegestütz",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Zieh dein T-Shirt verkehrt herum an",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Wirf ein Glas aus dem Fenster. Dann renn durchs Haus, klingle 3 mal, 2 mal schreien, stein ans Fenster werden und wieder zurück",
+            "schluck": 3,
+            "punkte": 5
+        }
+    ]
+
+}
