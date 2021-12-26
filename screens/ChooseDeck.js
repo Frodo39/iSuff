@@ -1,10 +1,10 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import Button from "../components/buttons/Button";
 
 import DeckSquare from "../components/DeckSquare";
 
-const ChooseDeck = () => {
+const ChooseDeck = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.textContainer}>
@@ -14,8 +14,10 @@ const ChooseDeck = () => {
                 <DeckSquare kartenName="Basic" kartenAnzahl="20"></DeckSquare>
                 <DeckSquare kartenName="Extreme" kartenAnzahl="20"></DeckSquare>
                 <DeckSquare kartenName="SFW" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="Alle" kartenAnzahl="80"></DeckSquare>
+                <DeckSquare kartenName="Alle" kartenAnzahl="60"></DeckSquare>
             </View>
+            <Button text="Fragen" onPress={() => navigation.navigate("FragenScreen")}/>
+
         </View>
     )
 }
