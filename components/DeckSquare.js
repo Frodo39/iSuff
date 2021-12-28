@@ -1,14 +1,16 @@
 import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
-const DeckSquare = ({kartenName, kartenAnzahl}) => {
+const DeckSquare = ({kartenName, kartenAnzahl, onPress}) => {
 
     return(
-        <View style={styles.deckSquare}>
-            <Text style={styles.theme}>{kartenName}</Text>
-            <Text style={styles.karten}>Karten: {kartenAnzahl}</Text>
-        </View>
+        <TouchableOpacity >
+            <View style={styles.deckSquare} onStartShouldSetResponder={onPress}>
+                <Text style={styles.theme}>{kartenName}</Text>
+                <Text style={styles.karten}>Karten: {kartenAnzahl}</Text>
+            </View>
+        </TouchableOpacity>
     )
 
 }

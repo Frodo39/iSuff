@@ -1,6 +1,5 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
-import Button from "../components/buttons/Button";
 
 import DeckSquare from "../components/DeckSquare";
 
@@ -11,12 +10,11 @@ const ChooseDeck = ({navigation}) => {
                  <Text style={styles.title}>Deck wählen</Text>
             </View>
             <View  style={styles.deckcontainer}>
-                <DeckSquare kartenName="Basic" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="Extreme" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="SFW" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="Alle" kartenAnzahl="60"></DeckSquare>
+                <DeckSquare kartenName="Basic" kartenAnzahl="20" onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Spicey" kartenAnzahl="20"  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Gaming" kartenAnzahl="20"  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Alle" kartenAnzahl="60"  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
             </View>
-            <Button text="Fragen" onPress={() => navigation.navigate("FragenScreen")}/>
 
         </View>
     )

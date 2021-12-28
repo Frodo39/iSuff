@@ -22,8 +22,9 @@ export default function App() {
         <Stack.Screen name="FragenScreen" component={FragenScreen} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
+
 
 const styles = StyleSheet.create({
 

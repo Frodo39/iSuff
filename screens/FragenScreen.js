@@ -1,29 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
 import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from "react-native";
 import Fragen from "../data/Fragen.json";
 
-const FragenScreen = ({navigation}) => {
+
+const FragenScreen = () => {
+    const [ranNumb, setRanNumb] = useState(1); 
+
+    const  richtigBeantwortet = () =>{
+       setRanNumb( Math.floor(Math.random() * Fragen.basic.length));
+    }
+
+    const  falschBeantwortet = () =>{
+        setRanNumb( Math.floor(Math.random() * Fragen.basic.length));
+     }
+
     return(
         <View style={styles.container}>
             <View style={styles.punkteBox}>
                 <Text>Punkte anzeige</Text>
             </View>
             <View style={styles.fragenBox}>
-                <Text style={styles.spieler}>Spieler 1</Text>
-                <Text style={styles.frage}>{Fragen.fragen[3].frage}</Text>
+                <Text style={styles.spieler}> {ranNumb}</Text>
+                <Text style={styles.frage}>{Fragen.basic[ranNumb].frage}</Text>
                 <View style={styles.shotBox}>
                     <Image  style={styles.image} source={require(`../images/Glass.png`)}></Image>
                     <Image  style={styles.image} source={require(`../images/Glass.png`)}></Image>
                 </View>
-                <Text style={styles.punkteAdd}>Punkte: + {Fragen.fragen[3].punkte}</Text>
+                <Text style={styles.punkteAdd}>Punkte: + {Fragen.basic[ranNumb].punkte}</Text>
                 <View style={styles.buttonBox}>
                     <View style={styles.buttonBoxMidBorder}>
-                        <TouchableOpacity onPress={() => Alert.alert("Aufgabe nicht gemacht")}>
+                        <TouchableOpacity onPress={() => richtigBeantwortet()}>
                             <Image style={styles.xIcon} source={require(`../images/X.png`)}></Image>
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => Alert.alert("Aufgabe erfolgreich gemacht")}>
+                        <TouchableOpacity onPress={() =>falschBeantwortet()}>
                             <Image style={styles.plusIcon} source={require(`../images/Check.png`)}></Image> 
                         </TouchableOpacity>
                     </View>
@@ -101,6 +112,10 @@ const styles = StyleSheet.create({
     plusIcon: {
         height:60,
         width: 60,
+    },
+    title:{
+        fontSize:10,
+        color: "#fff",
     }
 
 })
