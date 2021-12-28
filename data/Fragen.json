@@ -1,5 +1,5 @@
 {
-    "fragen":[
+    "basic":[
         {
             "frage": "Dreh dich im Kreis",
             "schluck": 2,
@@ -19,6 +19,36 @@
             "frage": "Wirf ein Glas aus dem Fenster. Dann renn durchs Haus, klingle 3 mal, 2 mal schreien, stein ans Fenster werden und wieder zurück",
             "schluck": 3,
             "punkte": 5
+        },
+        {
+            "frage": "Schlag dein Gegenüber",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Kira trinkt",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "der reihe nach heiße Sänger/Sängerinnen nennen. bis jemand in der runde anderer meinung ist",
+            "schluck": 1,
+            "punkte": 1
+        }
+    ],
+    "Spicey": [
+        {
+
+        }
+    ],
+    "Gaming": [
+        {
+
+        }
+    ],
+    "Alle": [
+        {
+
         }
     ]
 
