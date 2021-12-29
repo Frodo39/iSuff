@@ -1,47 +1,72 @@
 import React, {useState} from "react";
-import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from "react-native";
+import {SafeAreaView, View, Text, StyleSheet, Image, TouchableOpacity, Alert} from "react-native";
 import Fragen from "../data/Fragen.json";
 
 
 const FragenScreen = () => {
-    const [ranNumb, setRanNumb] = useState(1); 
+    const [ranNumb, setRanNumb] = useState(0); 
+    const [rotation, setRotation] = useState (0);
+    const [showShots, setShowShots] = useState(0);
+    const playerArr = ["Kira", "Lukas", "Basti","Gina", "René", "Janni"]
+
 
     const  richtigBeantwortet = () =>{
-       setRanNumb( Math.floor(Math.random() * Fragen.basic.length));
+       setRanNumb( Math.floor(Math.random() * Fragen.Basic.length));
+       setShowShots(Fragen.Basic[ranNumb].schluck)
+       if(rotation < playerArr.length -1){
+            setRotation(rotation +1);
+       }else if(rotation == playerArr.length -1){
+            setRotation(0);
+       }
     }
 
     const  falschBeantwortet = () =>{
-        setRanNumb( Math.floor(Math.random() * Fragen.basic.length));
+        setRanNumb( Math.floor(Math.random() * Fragen.Basic.length));
+        setShowShots(Fragen.Basic[ranNumb].schluck)
+        if(rotation < playerArr.length -1){
+            setRotation(rotation +1);
+        }else if(rotation == playerArr.length -1 ){
+            setRotation(0);
+        }
      }
 
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.punkteBox}>
                 <Text>Punkte anzeige</Text>
+                <Text style={styles.punkte}>{playerArr[0]}</Text>
+                <Text style={styles.punkte}>{playerArr[1]}</Text>
+                <Text style={styles.punkte}>{playerArr[2]}</Text>
+                <Text style={styles.punkte}>{playerArr[3]}</Text>
+                <Text style={styles.punkte}>{playerArr[4]}</Text>
+                <Text style={styles.punkte}>{playerArr[5]}</Text>
             </View>
             <View style={styles.fragenBox}>
-                <Text style={styles.spieler}> {ranNumb}</Text>
-                <Text style={styles.frage}>{Fragen.basic[ranNumb].frage}</Text>
+                <Text style={styles.spieler}> {playerArr[rotation]}</Text>
+                <Text style={styles.frage}>{Fragen.Basic[ranNumb].frage}</Text>
                 <View style={styles.shotBox}>
-                    <Image  style={styles.image} source={require(`../images/Glass.png`)}></Image>
-                    <Image  style={styles.image} source={require(`../images/Glass.png`)}></Image>
+                    {showShots >= 1 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
+                    {showShots >= 2 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
+                    {showShots >= 3 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
+                    {showShots >= 4 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
+                    {showShots == 5 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
                 </View>
-                <Text style={styles.punkteAdd}>Punkte: + {Fragen.basic[ranNumb].punkte}</Text>
+                <Text style={styles.punkteAdd}>Punkte: + {Fragen.Basic[ranNumb].punkte}</Text>
                 <View style={styles.buttonBox}>
                     <View style={styles.buttonBoxMidBorder}>
-                        <TouchableOpacity onPress={() => richtigBeantwortet()}>
+                        <TouchableOpacity onPress={() => falschBeantwortet()}>
                             <Image style={styles.xIcon} source={require(`../images/X.png`)}></Image>
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() =>falschBeantwortet()}>
+                        <TouchableOpacity onPress={() =>richtigBeantwortet()}>
                             <Image style={styles.plusIcon} source={require(`../images/Check.png`)}></Image> 
                         </TouchableOpacity>
                     </View>
                 </View>
             </View>
           
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -55,7 +80,10 @@ const styles = StyleSheet.create({
       },
     punkteBox: {
         flex: 1,
-        },
+    },
+    punkte:{
+        color:"#fff",
+    },
     fragenBox: {
         flex: 5,
         width: "85%",
