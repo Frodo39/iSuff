@@ -10,7 +10,7 @@ const Start = ({navigation}) => {
             <Text style={styles.title}>iSuff</Text>
             <Image style={styles.image} source={require(`../images/Glass.png`)}></Image>
               <View style={styles.buttonContainer}>
-                <Button text="Play" onPress={() => navigation.navigate("ChooseDeck")}/>
+                <Button text="Play" onPress={() => navigation.navigate("PlayerInput")}/>
                 <SmallButton text="How to play" onPress={() => navigation.navigate("HowToPlay")}/>
               </View>
         </View>

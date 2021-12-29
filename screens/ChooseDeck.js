@@ -1,19 +1,23 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
+import { clickProps } from "react-native-web/dist/cjs/modules/forwardedProps";
 
 import DeckSquare from "../components/DeckSquare";
+import Fragen from "../data/Fragen.json";
+ 
 
 const ChooseDeck = ({navigation}) => {
+
     return(
         <View style={styles.container}>
             <View style={styles.textContainer}>
-                 <Text style={styles.title}>Deck wählen</Text>
+                 <Text style={styles.title}></Text>
             </View>
             <View  style={styles.deckcontainer}>
-                <DeckSquare kartenName="Basic" kartenAnzahl="20" onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
-                <DeckSquare kartenName="Spicey" kartenAnzahl="20"  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
-                <DeckSquare kartenName="Gaming" kartenAnzahl="20"  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
-                <DeckSquare kartenName="Alle" kartenAnzahl="60"  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Basic" kartenAnzahl={Fragen.Basic.length} onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Spicey" kartenAnzahl={Fragen.Spicey.length}  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Gaming" kartenAnzahl={Fragen.Gaming.length}  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
+                <DeckSquare kartenName="Alle" kartenAnzahl={Fragen.Alle.length}  onPress={() => navigation.navigate("FragenScreen")}></DeckSquare>
             </View>
 
         </View>
