@@ -1,6 +1,5 @@
 import React from "react";
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const DeckSquare = ({kartenName, kartenAnzahl, onPress}) => {
 

@@ -3,6 +3,10 @@ import {View, Text, TextInput, StyleSheet} from "react-native";
 
 import Button from "../components/buttons/Button";
 
+
+//
+//momentan nicht verwendet
+//
 const PlayerInput = ({navigation}) => {
     const [playername, setPlayerName] = useState();
 

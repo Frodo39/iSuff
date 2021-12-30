@@ -9,6 +9,7 @@ import HowToPLayScreen from './screens/HowToPLayScreen';
 import ChooseDeckScreen from "./screens/ChooseDeck";
 import FragenScreen from './screens/FragenScreen';
 import PlayerInput from './screens/PlayerInputScreen';
+import WinScreen from './screens/WinScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,8 @@ export default function App() {
         <Stack.Screen name="ChooseDeck" component={ChooseDeckScreen} options={{headerShown: false}}/>
         <Stack.Screen name="HowToPlay" component={HowToPLayScreen} options={{headerShown: false}}/>
         <Stack.Screen name="FragenScreen" component={FragenScreen} options={{headerShown: false}}/>
+        <Stack.Screen name="WinScreen" component={WinScreen} options={{headerShown: false}}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   )
