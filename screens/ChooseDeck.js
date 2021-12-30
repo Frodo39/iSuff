@@ -1,20 +1,22 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 import DeckSquare from "../components/DeckSquare";
+import Fragen from "../data/Fragen.json";
+ 
 
-const ChooseDeck = () => {
+const ChooseDeck = ({navigation}) => {
+
     return(
         <View style={styles.container}>
             <View style={styles.textContainer}>
-                 <Text style={styles.title}>Deck wählen</Text>
+                 <Text style={styles.title}> Deck wählen</Text>
             </View>
             <View  style={styles.deckcontainer}>
-                <DeckSquare kartenName="Basic" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="Extreme" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="SFW" kartenAnzahl="20"></DeckSquare>
-                <DeckSquare kartenName="Alle" kartenAnzahl="80"></DeckSquare>
+                <DeckSquare kartenName="Basic" kartenAnzahl={Fragen.Basic.length} onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Basic",})}></DeckSquare>
+                <DeckSquare kartenName="Spicey" kartenAnzahl={Fragen.Spicey.length}  onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Spicey",})}></DeckSquare>
+                <DeckSquare kartenName="Gaming" kartenAnzahl={Fragen.Gaming.length}  onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Gaming",})}></DeckSquare>
+                <DeckSquare kartenName="Alle" kartenAnzahl={Fragen.Alle.length}  onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Alle",})}></DeckSquare>
             </View>
         </View>
     )
