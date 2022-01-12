@@ -7,7 +7,8 @@ const FragenScreen = ({route, navigation}) => {
     const [ranNumb, setRanNumb] = useState(0); 
     const [rotation, setRotation] = useState (0);
     const [showShots, setShowShots] = useState(0);
-    const playerArr = ["Kira", "Lukas", "Basti","Gina", "René", "Janni"]
+    const {players} = route.params;
+    const playerArr = [players] // wrong. namen sind alle anneinander
     const playerScoreArr = [0, 1, 2, 3, 4, 5];
     const {chosenDeck} = route.params;
     const goal = 50;
