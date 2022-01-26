@@ -27,8 +27,8 @@ const PlayerInput = ({navigation}) => {
     };
     
     const addNameHandler = () => {
-        setNameList(currendNames => [...currendNames, name]);
-        console.log(nameList.value);
+        setNameList(currendNames => [...currendNames,name]);
+        console.log(nameList);
     };
 
     return(
@@ -47,18 +47,18 @@ const PlayerInput = ({navigation}) => {
 
             {numberEntered ? 
             <View style={styles.namenScreen}>
-                <View style={styles.textContainer}>
+                <View style={styles.textContainer}> 
                     <Text style={styles.title}>{number}Spieler hinzufügen</Text>
                 </View>
                 <View style={styles.nameListContainer}>
-                {nameList.map((playername) => <View key={nameList.index}><Text >{playername}</Text></View>)}
+                    {nameList.map((playername, i) => <View key={i}><Text >{playername}</Text></View>)}
                 </View>
                 <View  style={styles.buttonContainer}>
                 <ScrollView>
                         <TextInput style={styles.input} onChangeText={nameInputHandler} value={name} placeholder="Name " placeholderTextColor={"#ffffff"} words clearTextOnFocus />
                         <SmallButton text="Add player" onPress={addNameHandler}/>
                     </ScrollView>
-                    <Button text="zum Deck" onPress={(e) => navigation.navigate("FragenScreen", {players: [nameList]})}/>
+                    <Button text="zum Deck" onPress={(e) => navigation.navigate("FragenScreen", {players: nameList})}/>
                 </View>
             </View> : null}
 

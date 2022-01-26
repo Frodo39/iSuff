@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {SafeAreaView, View, Text, StyleSheet, Image, TouchableOpacity} from "react-native";
 import Fragen from "../data/Fragen.json";
+import NameList from "../components/NameList";
 
 
 const FragenScreen = ({route, navigation}) => {
@@ -8,7 +9,6 @@ const FragenScreen = ({route, navigation}) => {
     const [rotation, setRotation] = useState (0);
     const [showShots, setShowShots] = useState(0);
     const {players} = route.params;
-    const playerArr = [players] // wrong. namen sind alle anneinander
     const playerScoreArr = [0, 1, 2, 3, 4, 5];
     const {chosenDeck} = route.params;
     const goal = 50;
@@ -18,17 +18,27 @@ const FragenScreen = ({route, navigation}) => {
     const [playerScore4, setPlayerScore4] = useState(0);
     const [playerScore5, setPlayerScore5] = useState(0);
     const [playerScore6, setPlayerScore6] = useState(0);
+    const [playerScore7, setPlayerScore7] = useState(0);
+    const [playerScore8, setPlayerScore8] = useState(0);
+    const [playerScore9, setPlayerScore9] = useState(0);
+
+    const [score, setScore] = useState([0,0,0,0,0,0,0,0,0]);
+
         
+    console.log("players: " + players.length)
+
+
+    
     const gewonnen = (score) => {
         if(score >= goal){
-            navigation.navigate("WinScreen", {winner: playerArr[rotation]});
+            navigation.navigate("WinScreen", {winner: players[rotation]});
         }
     }
     
     const nextPlayer = () => {
-        if(rotation < playerArr.length -1){
+        if(rotation < players.length -1){
             setRotation(rotation +1);
-        }else if(rotation == playerArr.length -1){
+        }else if(rotation == players.length -1){
             setRotation(0);
         }
     }
@@ -53,7 +63,16 @@ const FragenScreen = ({route, navigation}) => {
         }else if(rotation == 5){
             setPlayerScore6(playerScore6 + Fragen.Basic[ranNumb].punkte)
             gewonnen(playerScore6);
-        }  
+        }else if(rotation == 6){
+            setPlayerScore7(playerScore6 + Fragen.Basic[ranNumb].punkte)
+            gewonnen(playerScore7);
+        }else if(rotation == 7){
+            setPlayerScore8(playerScore6 + Fragen.Basic[ranNumb].punkte)
+            gewonnen(playerScore8);
+        }else if(rotation == 8){
+            setPlayerScore9(playerScore6 + Fragen.Basic[ranNumb].punkte)
+            gewonnen(playerScore9);
+        }
         nextPlayer();
     }
 
@@ -69,20 +88,12 @@ const FragenScreen = ({route, navigation}) => {
                 <Text style={styles.punkteTitle}>Deck: {(chosenDeck)}</Text>
                 <Text style={styles.punkteTitle}>Ziel: {goal} Punkte</Text>
                 <View style={styles.punkteBox}>
-                    <View style={styles.column1}>
-                        <Text style={styles.punkteText}>{playerArr[0]}: {playerScore1}</Text>
-                        <Text style={styles.punkteText}>{playerArr[1]}: {playerScore2}</Text>
-                        <Text style={styles.punkteText}>{playerArr[2]}: {playerScore3}</Text>
-                    </View>
-                    <View style={styles.column2}>
-                        <Text style={styles.punkteText}>{playerArr[3]}: {playerScore4}</Text>
-                        <Text style={styles.punkteText}>{playerArr[4]}: {playerScore5}</Text>
-                        <Text style={styles.punkteText}>{playerArr[5]}: {playerScore6}</Text>
-                    </View>
+                {players.map((players, i) => <View key={i}><Text >{players}: {score}</Text></View>)}
+
                 </View>
             </SafeAreaView>
             <View style={styles.fragenBox}>
-                <Text style={styles.spieler}> {playerArr[rotation]}</Text>
+                <Text style={styles.spieler}> {players[rotation]}</Text>
                 <Text style={styles.frage}>{Fragen.Basic[ranNumb].frage}</Text>
                 <View style={styles.shotBox}>
                     {showShots >= 1 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
