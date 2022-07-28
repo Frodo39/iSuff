@@ -1,82 +1,46 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useContex} from "react";
 import {SafeAreaView, View, Text, StyleSheet, Image, TouchableOpacity} from "react-native";
 import Fragen from "../data/Fragen.json";
-import NameList from "../components/NameList";
+import {PlayerListContext} from "./PlayerInputScreen";
 
 
-const FragenScreen = ({route, navigation}) => {
+const TestScreen = ({route, navigation}) => {
     const [ranNumb, setRanNumb] = useState(0); 
     const [rotation, setRotation] = useState (0);
     const [showShots, setShowShots] = useState(0);
+    const [punkte, setPunkte] = useState([]);
     const {players} = route.params;
-    const playerScoreArr = [0, 1, 2, 3, 4, 5];
     const {chosenDeck} = route.params;
     const goal = 50;
-    const [playerScore1, setPlayerScore1] = useState(0);
-    const [playerScore2, setPlayerScore2] = useState(0);
-    const [playerScore3, setPlayerScore3] = useState(0);
-    const [playerScore4, setPlayerScore4] = useState(0);
-    const [playerScore5, setPlayerScore5] = useState(0);
-    const [playerScore6, setPlayerScore6] = useState(0);
-    const [playerScore7, setPlayerScore7] = useState(0);
-    const [playerScore8, setPlayerScore8] = useState(0);
-    const [playerScore9, setPlayerScore9] = useState(0);
-
-    const [score, setScore] = useState([0,0,0,0,0,0,0,0,0]);
-
-        
-    console.log("players: " + players.length)
-
 
     
-    const gewonnen = (score) => {
-        if(score >= goal){
-            navigation.navigate("WinScreen", {winner: players[rotation]});
-        }
+    useEffect(() => {
+        createPunkte(); 
+    }, [],);
+
+    const createPunkte= () => {
+       setPunkte(players.map(() => 0)) // erstellt für jeden eingetragenen Namen eine 0 als ausgangspunkte in einem Array.
     }
-    
+
     const nextPlayer = () => {
         if(rotation < players.length -1){
             setRotation(rotation +1);
-        }else if(rotation == players.length -1){
+        }else{
             setRotation(0);
         }
     }
-    const  richtigBeantwortet = () =>{
-       setRanNumb( Math.floor(Math.random() * Fragen.Basic.length));
-       setShowShots(Fragen.Basic[ranNumb].schluck);
-        if(rotation == 0){
-            setPlayerScore1(playerScore1 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore1);
-        }else if(rotation == 1){
-            setPlayerScore2(playerScore2 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore2);
-        }else if(rotation == 2){
-            setPlayerScore3(playerScore3 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore3);
-        }else if(rotation == 3){
-            setPlayerScore4(playerScore4 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore4);
-        }else if(rotation == 4){
-            setPlayerScore5(playerScore5 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore5);
-        }else if(rotation == 5){
-            setPlayerScore6(playerScore6 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore6);
-        }else if(rotation == 6){
-            setPlayerScore7(playerScore6 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore7);
-        }else if(rotation == 7){
-            setPlayerScore8(playerScore6 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore8);
-        }else if(rotation == 8){
-            setPlayerScore9(playerScore6 + Fragen.Basic[ranNumb].punkte)
-            gewonnen(playerScore9);
-        }
+    const richtigBeantwortet = () =>{
+        setRanNumb( Math.floor(Math.random() * Fragen.Basic.length));
+        setShowShots(Fragen.Basic[ranNumb].schluck);
+        setPunkte(old => {
+            const re = old.slice();
+            re[rotation] = re[rotation] + Fragen.Basic[ranNumb].punkte; //nimmt das array, teilt es auf und dem entsprechendem index werden die punkte gutgeschrieben.
+            return re; 
+            })
         nextPlayer();
     }
 
-    const  falschBeantwortet = () =>{
+     const  falschBeantwortet = () =>{
         setRanNumb( Math.floor(Math.random() * Fragen.Basic.length));
         setShowShots(Fragen.Basic[ranNumb].schluck)
         nextPlayer();
@@ -85,15 +49,13 @@ const FragenScreen = ({route, navigation}) => {
     return(
         <SafeAreaView style={styles.container}>
             <SafeAreaView style={styles.punkteContainer}>
-                <Text style={styles.punkteTitle}>Deck: {(chosenDeck)}</Text>
                 <Text style={styles.punkteTitle}>Ziel: {goal} Punkte</Text>
                 <View style={styles.punkteBox}>
-                {players.map((players, i) => <View key={i}><Text >{players}: {score[i]}</Text></View>)}
-
+                    {players.map((players, i) => <View key={i} style={styles.playerNameWrapper}><Text style={styles.BoxNames}>{players.pName}: {punkte[i]}</Text></View>)}
                 </View>
             </SafeAreaView>
             <View style={styles.fragenBox}>
-                <Text style={styles.spieler}> {players[rotation]}</Text>
+                <Text style={styles.spieler}> {players[rotation].pName}</Text>
                 <Text style={styles.frage}>{Fragen.Basic[ranNumb].frage}</Text>
                 <View style={styles.shotBox}>
                     {showShots >= 1 ? <Image  style={styles.image} source={require(`../images/Glass.png`)} /> : null}
@@ -124,24 +86,25 @@ const FragenScreen = ({route, navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexBasis: '100%',
         flexDirection: "column",
         backgroundColor: '#050248',
         alignItems: 'center',
         justifyContent: 'center',
       },
     punkteContainer: {
-        flex: 1,
-        paddingTop: "10%",
+        paddingTop: "2%",
+        maxHeight: "25%",
         width: "85%",
         flexDirection: "column",
         alignItems: "center",
+        marginBottom: '1%',
     },
     punkteTitle:{
         color: "#fff",
     },
     punkteBox:{
-        justifyContent: "space-around",
+        justifyContent: "center",
         width: "100%",
         flexDirection: "row",
         borderWidth: 1,
@@ -149,7 +112,18 @@ const styles = StyleSheet.create({
         borderStyle:"dashed",
         borderColor: "#E92EFB",
         backgroundColor: "#04005E",
+        flexWrap: 'wrap',
+        overflow: 'scroll', 
+    },
+    playerNameWrapper:{
+        flexBasis: '30%',
+        marginTop: 1,
+        marginBottom: 1,
 
+
+    },
+    BoxNames:{
+        color: "#ffffff",
     },
     punkteText:{
         color:"#fff",
@@ -163,13 +137,14 @@ const styles = StyleSheet.create({
         borderColor: "#E92EFB",
         borderRadius: 5,
         borderWidth: 2,  
-        marginBottom: "5%",
+        marginBottom: "3%",
       },
     spieler: {
-        flex:0.5,
-        fontSize: 30,
+        flex: 1,
+        fontSize: 26,
+        fontWeight: 'bold',
         color: "#ffffff",
-        marginTop: "4%",
+        marginTop: "2%",
       },
     frage:{
         flex: 6,
@@ -190,7 +165,7 @@ const styles = StyleSheet.create({
         flex: 0.4,
         fontSize: 16,
         color: "#ffffff",
-      },
+    },
     buttonBox: {
         flex: 1,
         flexDirection: "row",
@@ -224,4 +199,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default FragenScreen;
+export default TestScreen;

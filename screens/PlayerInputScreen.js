@@ -27,8 +27,7 @@ const PlayerInput = ({navigation}) => {
     };
     
     const addNameHandler = () => {
-        setNameList(currendNames => [...currendNames,name]);
-        console.log(nameList);
+        setNameList(currentNames => [...currentNames,{pName: name}]);
     };
 
     return(
@@ -38,7 +37,7 @@ const PlayerInput = ({navigation}) => {
             <View  style={styles.spieleranzahlScreenContainer}>   
                 <Text style={styles.title}>Wie viele Spieler?</Text>
                 <View style={styles.numbInputContainer}>
-                    <TextInput style={styles.numbInput}  value={number} onChangeText={(val) => setNumber(val)}/>
+                    <TextInput style={styles.numbInput}  value={number} onChangeText={(val) => setNumber(val)}/> 
                     <SmallButton text="weiter" onPress={numberEnteredHandler}/>
                     <Text> {number}</Text>
                 </View>
@@ -51,14 +50,16 @@ const PlayerInput = ({navigation}) => {
                     <Text style={styles.title}>{number}Spieler hinzufügen</Text>
                 </View>
                 <View style={styles.nameListContainer}>
-                    {nameList.map((playername, i) => <View key={i}><Text >{playername}</Text></View>)}
+                    {nameList.map((player, i) => <View key={i}><Text style={styles.names}>{player.pName}</Text></View>)}
                 </View>
                 <View  style={styles.buttonContainer}>
                 <ScrollView>
                         <TextInput style={styles.input} onChangeText={nameInputHandler} value={name} placeholder="Name " placeholderTextColor={"#ffffff"} words clearTextOnFocus />
                         <SmallButton text="Add player" onPress={addNameHandler}/>
                     </ScrollView>
-                    <Button text="zum Deck" onPress={(e) => navigation.navigate("FragenScreen", {players: nameList})}/>
+                    {/*<Button text="zum Deck" onPress={(e) => navigation.navigate("FragenScreen", {players: nameList})}/>*/}
+                    <Button text="zum Deck" onPress={(e) => navigation.navigate("TestScreen", {players: nameList})}/>
+
                 </View>
             </View> : null}
 
@@ -107,6 +108,9 @@ const styles = StyleSheet.create({
         padding: 10,
         color: "#ffffff",
         borderColor: "#E92EFB",
+    },
+    names:{
+        color:"#ffffff",
     },
     buttonContainer:{
         flex:1,
