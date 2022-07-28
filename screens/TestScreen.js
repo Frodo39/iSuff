@@ -37,6 +37,9 @@ const TestScreen = ({route, navigation}) => {
             re[rotation] = re[rotation] + Fragen.Basic[ranNumb].punkte; //nimmt das array, teilt es auf und dem entsprechendem index werden die punkte gutgeschrieben.
             return re; 
             })
+        if(punkte[rotation] >= goal){
+            navigation.navigate("WinScreen", {winner: players[rotation].pName});
+        }
         nextPlayer();
     }
 
@@ -113,7 +116,6 @@ const styles = StyleSheet.create({
         borderColor: "#E92EFB",
         backgroundColor: "#04005E",
         flexWrap: 'wrap',
-        overflow: 'scroll', 
     },
     playerNameWrapper:{
         flexBasis: '30%',

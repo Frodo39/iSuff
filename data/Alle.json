@@ -1,0 +1,745 @@
+{
+    "Basic":[
+        {
+            "frage": "Dreh dich im Kreis",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Mach 5 Liegestütz",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Zieh dein T-Shirt verkehrt herum an",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Wirf ein Glas aus dem Fenster. Dann renn durchs Haus, klingle 3 mal, 2 mal schreien, stein ans Fenster werden und wieder zurück",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Box dein Gegenüber",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Die Person zu deiner linken trinkt 1 Shot",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Die Person zu deiner rechten trinkt 1 Shot",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Die Person gegenüber trinkt 1 Shot",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Der reihe nach heiße Sänger/Sängerinnen nennen. Bis jemand in der Runde anderer meinung ist",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Male der Person gegenüber etwas auf eine Körperstelle (die Andere Person wählt diese)",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Lasse dir von der Person rechts von dir Etwas auf den Arm Zeichenn",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Eine Runde Flaschendrehen. Du stellst die erste Frage",
+            "schluck": 2,
+            "punkte": 1
+        },
+
+
+        {
+            "frage": "Trink einen für jedes Schmuckstück an deinem Körper. Dazu zählen Ohrringe, Ringe, Ketten, Piercings, Tattoos, Uhren, Armbänder usw",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Anstarren – Dein linker/rechter Nachbar starren sich an. Wer zuerst reagiert bzw. lacht, hat verloren und trinkt",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Spiele eine Runde „Ich Packe meinen Koffer“. Der Verlierer trinkt",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Eine Runde Flaschendrehen. Du stellst die erste Frage",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Mystery Shot – Deine Mitspieler mischen dir einen Shot aus beliebigen Getränken",
+            "schluck": 5,
+            "punkte": 10
+        },
+        {
+            "frage": "Sexgeschichte – Erzähle von deiner lustigsten sexuellen Erfahrung",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Zeige dein letztes Snapchat Foto",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Zeige dein letztes geschossenes Fotos",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Erzähle eine Lüge und eine wahre Geschichte. Die Mitspieler erraten was gelogen war. Liegen sie richtig, trinkst du. Irren sie sich, trinken sie.",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Fuck, Marry, Kill – Dir werden drei Personen genannt. Wen würdest du ficken, wen heiraten und wen umbringen und wieso?",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Fuck, Marry, Kill Part2 – Die anderen schreiben ihren Namen auf einen kleinen Zettel. Anschließend wählst du 3 aus. Wen würdest du ficken, wen heiraten und wen umbringen und wieso?",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Zeige dein letztes verschicktes Video",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Käse - Du hast 10 Sekunden Zeit um Käsesorten aufzuzählen. Für jede kannst du einen Shot verteilen",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Leage of Legends - Du hast 10 Sekunden Zeit um Leage of Legends Charaktere aufzuzählen. Für jede kannst du einen Schluck verteilen",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Valorant - Du hast 10 Sekunden Zeit um Valorant Waffen aufzuzählen. Für jede kannst du einen Schluck verteilen",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Valorant - Du hast 10 Sekunden Zeit um Valorant Agents aufzuzählen. Für jede kannst du einen Schluck verteilen",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Städte - Nennt der Reihe nach Städte",
+            "schluck": 3,
+            "punkte": 2
+        },
+        {
+            "frage": "Spiele - Nennt der Reihe nachSpiele",
+            "schluck": 3,
+            "punkte": 2
+        },
+        {
+            "frage": "Bier - Du hast 10 Sekunden Zeit um Biersorten  aufzuzählen. Für jede kannst du einen schluck verteilen",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Öffne eine Flasche Bier. Flaschenöffner ist verboten!",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Was ist in einem Dreckssack? (Getränk)",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Was ist in einem Astra? (Getränk)",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Narbengeschichte - Erzähle eine Geschichte die zu einer Narbe an deinem Körper geführt hat, oder trink zwei Shots",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Terrorangriff - Schreibe ein gängiges Wort auf einen Zettel und leg den Zettel verdeckt auf den Tisch. Wenn dieses Wort fällt, muss derjenige 1 Shots trinken",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Bauernhof - Wähle einen Spieler der immer dann ein Tiergeräusch machen muss, wenn ein ausgewählter Spieler trinkt",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Tausche deinen Sitzplatz mit der zweitschönsten Person an Tisch",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Trink ein Wasser, du brauchst es wahrscheinlich",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Wer war dein Kindheits Crush?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Wer ist dein Celebrity Crush?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Trink ein Wasser, du brauchst es wahrscheinlich",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Trink ein Wasser, du brauchst es wahrscheinlich",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Dicks drink - Alle Männer trinken ",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Chicks drink - Alle Frauen trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Trink 1 shot ",
+            "schluck": 5,
+            "punkte": 3
+        },
+        {
+            "frage": "Verteile 2 Shots an 2 Spieler",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Erstell eine neue Regel welche für den Rest der Runde gilt",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Daumen. Wenn du deinen Daumen auf den den Tisch legst, müssen das alle machen. Der Letzte muss trinken. 1x",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Alle mit blonden Haaren trinken",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Alle mit schwarzen Haaren trinken",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Alle mit braunen Haaren trinken",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Spiele Schere, Stein, Papier mit einem ausgewählten Spieler. Der Verlierer trinkt",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Spiele Schere, Stein, Papier mit einem mit der Person links von dir",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Spiele Schere, Stein, Papier mit einem mit der Person rechten von dir",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Shots - Alle trinken einen Shot!",
+            "schluck": 1,
+            "punkte": 2
+        },
+        {
+            "frage": "Nichts passiert. Setze eine Runde aus",
+            "schluck": 0,
+            "punkte": 0
+        },
+        {
+            "frage": "Nichts passiert. Setze eine Runde aus",
+            "schluck": 0,
+            "punkte": 0
+        },
+        {
+            "frage": "Mache Armdrücken mit der Person links von dir. Der Verlierer trinkt",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Mache Armdrücken mit der Person rechts von dir. Der Verlierer trinkt",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Mach einen Handstand",
+            "schluck": 2,
+            "punkte": 7
+        },
+        {
+            "frage": "Der jüngste trinkt.",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Der älteste trinkt.",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Der größte trinkt",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Der kleinste trinkt",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Anfangsbuchstaben A – M trinken",
+            "schluck": 1,
+            "punkte": 2
+        },
+        {
+            "frage": "Anfangsbuchstaben N - Z trinken",
+            "schluck": 1,
+            "punkte": 2
+        },
+        {
+            "frage": "Alle mit Bart trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Alle ohne Bart trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "3-Finger - Ich hab noch nie… - spielen. (jeder Spieler hält 3 Finger hoch und es wird reihum gesagt :Ich hab noch nie... + etwas, was man selbst noch nie getan hat. Für jede Aktion, die du bereits getan hast, nimmst du einen Finger runter und trinkst einen. Wer zuerst alle drei Finger unten hat, verliert und trinkt einen Schnaps",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Alle Singles trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Alle Pärchen trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Einen Trinkspruch aufsagen, danach trinken alle",
+            "schluck": 2,
+            "punkte": 5
+        },
+        {
+            "frage": "Wahrheit oder Pflicht spielen",
+            "schluck": 2,
+            "punkte": 5
+        },
+        {
+            "frage": "Küssen – Küsse deinen linken oder rechten Nachbarn",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Sing ein Lied oder trink",
+            "schluck": 4,
+            "punkte": 10
+        },
+        {
+            "frage": "Gebe deinem linken Nachbarn einen Lapdance",
+            "schluck": 5,
+            "punkte": 10
+        },
+        {
+            "frage": "Gebe deinem rechten Nachbarn einen Lapdance",
+            "schluck": 5,
+            "punkte": 10
+        },
+        {
+            "frage": "Nimm einen Bodyshot von deinem linken Nachbarn",
+            "schluck": 4,
+            "punkte": 10
+        },
+        {
+            "frage": "Nimm einen Bodyshot von deinem rechten Nachbarn",
+            "schluck": 4,
+            "punkte": 10
+        },
+        {
+            "frage": "Kellner – Du musst für die ganze Gruppe bis zum Ende des Spiels Getränke holen und servieren",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Lese die zuletzt gesendete WhatsApp vor",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Lese die zuletzt erhaltene WhatsApp vor",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Lese die zuletzt gesendete Snapchat Nachricht vor",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Lese die zuletzt erhaltene Snapchat Nachricht vor",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Stimmt darüber ab, wer als letztes heiraten wird. Die Person muss trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Mache ein Tiergeräusch nach. Deine Mitspieler raten welches Tier du imitierst",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Für 30 Sekunden twerken",
+            "schluck": 3,
+            "punkte": 6
+        },
+        {
+            "frage": "Zieh ein Kleidungsstück aus",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Mache der linken Person ein Kompliment und beleidige die rechte Person",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Sexposition – Stelle deine Lieblingssexposition mit deinem linken/rechten Nachbar pantomimisch dar",
+            "schluck": 3,
+            "punkte": 6
+        },
+        {
+            "frage": "Du darfst nur noch mit der anderen Hand trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Medusa - Stellt eine beliebige Menge Schnaps auf den Tisch. Schaut nach unten und hebt gleichzeitig die Köpfe. Jeder Spieler starrt einen anderen an. Schaut dieser zurück, ruft ihr MEDUSA! und trinkt. Das Spiel geht so lange, bis alle Shots leer sind",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Wasserfall - Alle Spieler fangen gleichzeitig an zu trinken. Man darf erst aufhören, wenn der Spieler zu seiner Rechten absetzt. Wer den Stein gezogen hat, setzt zuerst ab",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Bodyguard - Wähle einen Bodyguard. Für den Rest des Spieles muss er den ersten aller an dich verteilten Getränke trinken",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Trink einen für jedes Jahr, das du in der Uni verbracht hast",
+            "schluck": 2,
+            "punkte": 1
+        },
+        {
+            "frage": "Außenseiter - Du darfst für die folgende Runde nicht am Tisch sitzen",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Tausche dein Getränk mit der Person mit dem vollsten Glas",
+            "schluck": 4,
+            "punkte": 3
+        },
+        {
+            "frage": "Zeig dein zuletzt gespeichertes TikTok",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du schonmal die Arbeit geschwänzt? Wenn ja, trink",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Hast du schonmal bei einem Wutanfall etwas kaputt gemacht?",
+            "schluck": 1,
+            "punkte": 1
+        },
+        {
+            "frage": "Pinkelst du unter beim Duschen?",
+            "schluck": 2,
+            "punkte": 2
+        },
+        {
+            "frage": "Hattest du schonmal einen Filmriss?",
+            "schluck": 1,
+            "punkte": 2
+        },
+        {
+            "frage": "Hast du schonmal ein Dating-Profil erstellt, um dein Ego zu boosten?",
+            "schluck": 1,
+            "punkte": 2
+        },
+        {
+            "frage": "Hast du schonmal einen Unbekannten geküsst?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Hattest du schonmal einen One Night Stand?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du schonmal jemanden geghostet? Wen und warum?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Wurdest du schonmal beim Sex erwicht? Von wem?",
+            "schluck": 3,
+            "punkte": 4
+        },
+        {
+            "frage": "Was ist deine most seen Porn Kategorie?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du schonmal davon geträumt eine Person zu küssen, die gerade mitspielt",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Hast du schonmal was aus dem Kamasutra getestet?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Hattest du schonmal sex in der Öffentlichkeit?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Was ist dein Lieblings Sexspielzeug?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du schonmal einen Orgasmus vorgetäuscht?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Wo hättest du gerne mal Sex?",
+            "schluck": 3,
+            "punkte": 4
+        },
+        {
+            "frage": "Was ist der ungewöhnlichste Ort an dem du Sex hattest?",
+            "schluck": 3,
+            "punkte": 3
+        },
+        {
+            "frage": "Analsex - Yay oder Nay?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Würdest / Hast du einen Amateur-Porno gedreht?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Ich hab noch nie längliche Lebensmittel (Gurke, Karotte etc.) zur Selbstbefriedigung benutzt?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du dich schonmal beim Oralsex geekelt?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Hattest du schonmal Sex mit dem/der Ex?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Stell dich in die Mitte vom Raum mit verbundenen Augen und lasse dich von einem Mitspieler küssen",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Mit wievielen Personen hast du bereits geschalfen und wie viele Krankheiten hast du dir damit eingefangen?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Was ist der schlimmste Fetisch für dich",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Hast du einen Fetisch? Welchen?",
+            "schluck": 2,
+            "punkte": 5
+        },
+        {
+            "frage": "Zieh einer Person die Hose aus, ohne deine Hände zu benutzen",
+            "schluck": 3,
+            "punkte": 5
+        },
+        {
+            "frage": "Öffne den BH einer Person ohne hinzugucken",
+            "schluck": 2,
+            "punkte": 4
+        },
+        {
+            "frage": "Geh aus dem Raum und zieh deine Unterwäsche aus, zieh deine Hose wieder an und komm zurück",
+            "schluck": 4,
+            "punkte": 5
+        },
+        {
+            "frage": "Wer ist deiner Meinung nach am besten im Bett und warum?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du schonmal Sexspielzeug gekauft?",
+            "schluck": 2,
+            "punkte": 3
+        },
+        {
+            "frage": "Hast du schonmal im Auto masturbiert?",
+            "schluck": 3,
+            "punkte": 4
+        }
+
+    ],
+    "Spicey": [ 
+            {
+                "frage": "Hast du schonmal einen Unbekannten geküsst?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Hattest du schonmal einen One Night Stand?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Hast du schonmal jemanden geghostet? Wen und warum?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Wurdest du schonmal beim Sex erwicht? Von wem?",
+                "schluck": 3,
+                "punkte": 4
+            },
+            {
+                "frage": "Was ist deine most seen Porn Kategorie?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Hast du schonmal davon geträumt eine Person zu küssen, die gerade mitspielt",
+                "schluck": 2,
+                "punkte": 4
+            },
+            {
+                "frage": "Hast du schonmal was aus dem Kamasutra getestet?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Hattest du schonmal sex in der Öffentlichkeit?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Was ist dein Lieblings Sexspielzeug?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Hast du schonmal einen Orgasmus vorgetäuscht?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Wo hättest du gerne mal Sex?",
+                "schluck": 3,
+                "punkte": 4
+            },
+            {
+                "frage": "Was ist der ungewöhnlichste Ort an dem du Sex hattest?",
+                "schluck": 3,
+                "punkte": 3
+            },
+            {
+                "frage": "Analsex - Yay oder Nay?",
+                "schluck": 2,
+                "punkte": 3
+            },
+            {
+                "frage": "Würdest / Hast du einen Amateur-Porno gedreht?",
+                "schluck": 2,
+                "punkte": 3
+            }
+    ],
+    "Gaming": [
+        {
+
+        }
+    ],
+    "Alle": [
+        {
+
+        }
+    ]
+
+}

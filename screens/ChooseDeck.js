@@ -13,6 +13,7 @@ const ChooseDeck = ({navigation}) => {
                  <Text style={styles.title}> Deck wählen</Text>
             </View>
             <View  style={styles.deckcontainer}>
+                <DeckSquare kartenName="Alle" kartenAnzahl={Fragen.Basic.length} onPress={() => navigation.navigate("Alle", {chosenDeck: "Alle",})}></DeckSquare>
                 <DeckSquare kartenName="Basic" kartenAnzahl={Fragen.Basic.length} onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Basic",})}></DeckSquare>
                 <DeckSquare kartenName="Spicey" kartenAnzahl={Fragen.Spicey.length}  onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Spicey",})}></DeckSquare>
                 <DeckSquare kartenName="Gaming" kartenAnzahl={Fragen.Gaming.length}  onPress={() => navigation.navigate("FragenScreen", {chosenDeck: "Gaming",})}></DeckSquare>

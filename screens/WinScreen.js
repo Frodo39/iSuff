@@ -11,13 +11,13 @@ const WinScreen = ({route, navigation}) => {
 
     
     if(ranNumb1 == 0){
-        setRanNumb1( Math.floor(Math.random() * 6));
-        setRanNumb2( Math.floor(Math.random() * 3));
+        setRanNumb1( Math.floor(Math.random() * 6 +1));
+        setRanNumb2( Math.floor(Math.random() * 3 +1));
     }
   
     return(
         <View style={styles.container}> 
-            <Text style={styles.title}> {(winner)} hat Gewonnen</Text>
+            <Text style={styles.title}> {(winner)} hat Gewonnen!!</Text>
             <Text style={styles.title2}>Entscheide: </Text>
             <View style={styles.optionsContainer}>
                 <View style={styles.optionAContainer}>
@@ -25,7 +25,7 @@ const WinScreen = ({route, navigation}) => {
                     
                 </View>
                 <View style={styles.optionBContainer}>
-                    <Text style={styles.optionText}>{winner} Darf Shots an  {ranNumb2} Personen verteilen.</Text>
+                    <Text style={styles.optionText}>{winner} Darf Shots an  {ranNumb2 } Personen verteilen.</Text>
                 </View>
             </View>
               <View style={styles.buttonContainer}>
