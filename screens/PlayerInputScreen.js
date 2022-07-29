@@ -39,7 +39,7 @@ const PlayerInput = ({navigation}) => {
                         <SmallButton text="Add player" onPress={addNameHandler}/>
                     </View>
                     {/*<Button text="zum Deck" onPress={(e) => navigation.navigate("FragenScreen", {players: nameList})}/>*/}
-                    <Button text="zum Deck" onPress={(e) => navigation.navigate("TestScreen", {players: nameList})}/>  
+                   <Button text="zum Deck" onPress={(e) => navigation.navigate("TestScreen", {players: nameList})}/> 
                 </View>
             </View> 
         </View>
